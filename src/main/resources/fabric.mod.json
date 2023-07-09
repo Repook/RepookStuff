@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "repooks-stuff",
+	"version": "${version}",
+	"name": "Repook's Stuff",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/repooks-stuff/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.repookstuff.ExampleMod"
+		],
+		"client": [
+			"com.repookstuff.ExampleModClient"
+		]
+	},
+	"mixins": [
+		"repooks-stuff.mixins.json",
+		{
+			"config": "repooks-stuff.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.14.21",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
